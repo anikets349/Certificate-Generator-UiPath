@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Certificate_Generator___B5" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="711.2,1280.8" sap2010:WorkflowViewState.IdRef="Certificate_Generator___B5_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:besm="clr-namespace:BalaReva.EasyPowerPoint.Scope.Main;assembly=BalaReva.Easy.PowerPoint" xmlns:bess="clr-namespace:BalaReva.EasyPowerPoint.Scope.Slides;assembly=BalaReva.Easy.PowerPoint" xmlns:bp="clr-namespace:BalaReva.PowerPoint;assembly=BalaReva.PowerPoint" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Certificate_Generator___B5" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="711.2,1722.4" sap2010:WorkflowViewState.IdRef="Certificate_Generator___B5_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:besm="clr-namespace:BalaReva.EasyPowerPoint.Scope.Main;assembly=BalaReva.Easy.PowerPoint" xmlns:bess="clr-namespace:BalaReva.EasyPowerPoint.Scope.Slides;assembly=BalaReva.Easy.PowerPoint" xmlns:bp="clr-namespace:BalaReva.PowerPoint;assembly=BalaReva.PowerPoint" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="70">
+    <scg:List x:TypeArguments="x:String" Capacity="39">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -43,7 +43,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="44">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="23">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -75,21 +75,19 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Certificate_Generator" sap:VirtualizedContainerService.HintSize="668,1216" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Certificate_Generator - B5" sap:VirtualizedContainerService.HintSize="668,1657.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="details" />
-      <Variable x:TypeArguments="x:String" Name="resTable" />
       <Variable x:TypeArguments="x:String" Name="name" />
-      <Variable x:TypeArguments="x:String" Name="email" />
-      <Variable x:TypeArguments="x:String" Name="pwd" />
+      <Variable x:TypeArguments="x:String" Name="password" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadRange AddHeaders="True" DataTable="[details]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="626.4,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="A1" SheetName="Sheet1" WorkbookPath="D:\New folder\6th sem\RPA\Course Project\Participants.xlsx" />
-    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[details]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="626.4,746.4" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ReadRange AddHeaders="True" DataTable="[details]" DisplayName="Read Range - B5" sap:VirtualizedContainerService.HintSize="626.4,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="A1" SheetName="Sheet1" WorkbookPath="D:\New folder\6th sem\RPA\Course Project\Participants.xlsx" />
+    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[details]" DisplayName="For Each Row - B5" sap:VirtualizedContainerService.HintSize="626.4,746.4" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
@@ -101,7 +99,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign sap:VirtualizedContainerService.HintSize="535.2,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign DisplayName="Assign - B5" sap:VirtualizedContainerService.HintSize="535.2,60" sap2010:WorkflowViewState.IdRef="Assign_1">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[name]</OutArgument>
               </Assign.To>
@@ -109,7 +107,7 @@
                 <InArgument x:TypeArguments="x:String">[row.Item("Name").ToString]</InArgument>
               </Assign.Value>
             </Assign>
-            <besm:PowerPointScope ModifyPassword="{x:Null}" OpenPassword="{x:Null}" DisplayName="PowerPoint Application Scope" FilePath="D:\New folder\6th sem\RPA\Course Project\Certificate.pptx" sap:VirtualizedContainerService.HintSize="535.2,295.2" sap2010:WorkflowViewState.IdRef="PowerPointScope_1">
+            <besm:PowerPointScope ModifyPassword="{x:Null}" OpenPassword="{x:Null}" DisplayName="PowerPoint Application Scope - B5" FilePath="D:\New folder\6th sem\RPA\Course Project\Certificate.pptx" sap:VirtualizedContainerService.HintSize="535.2,295.2" sap2010:WorkflowViewState.IdRef="PowerPointScope_1">
               <besm:PowerPointScope.Body>
                 <ActivityAction x:TypeArguments="besm:PowerPointObject">
                   <ActivityAction.Argument>
@@ -121,21 +119,61 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <bess:TextShapeEdit ExecutionResult="{x:Null}" ContinueOnError="False" Delay="3" DisplayName="Text ShapeEdit" sap:VirtualizedContainerService.HintSize="233.6,61.6" sap2010:WorkflowViewState.IdRef="TextShapeEdit_1" SlideIndex="1" TextIndex="2" TextStyle="[New TextShape(Name)]" />
+                    <bess:TextShapeEdit ExecutionResult="{x:Null}" ContinueOnError="False" Delay="3" DisplayName="Text ShapeEdit - B5" sap:VirtualizedContainerService.HintSize="233.6,61.6" sap2010:WorkflowViewState.IdRef="TextShapeEdit_1" SlideIndex="1" TextIndex="2" TextStyle="[New TextShape(Name)]" />
                   </Sequence>
                 </ActivityAction>
               </besm:PowerPointScope.Body>
             </besm:PowerPointScope>
-            <bp:ExportToPdf ExecutionResult="{x:Null}" DisplayName="Export To PDF" FilePath="D:\New folder\6th sem\RPA\Course Project\Certificate.pptx" sap:VirtualizedContainerService.HintSize="535.2,69.6" sap2010:WorkflowViewState.IdRef="ExportToPdf_1" PDFFilePath="[&quot;D:\New folder\6th sem\RPA\Course Project\Certificates\&quot; + Name + &quot;.pdf&quot;]" />
+            <bp:ExportToPdf ExecutionResult="{x:Null}" DisplayName="Export To PDF - B5" FilePath="D:\New folder\6th sem\RPA\Course Project\Certificate.pptx" sap:VirtualizedContainerService.HintSize="535.2,69.6" sap2010:WorkflowViewState.IdRef="ExportToPdf_1" PDFFilePath="[&quot;D:\New folder\6th sem\RPA\Course Project\Certificates\&quot; + Name + &quot;.pdf&quot;]" />
           </Sequence>
         </ActivityAction>
       </ui:ForEachRow.Body>
     </ui:ForEachRow>
-    <ui:GetPassword DisplayName="Get Password" sap:VirtualizedContainerService.HintSize="626.4,22.4" sap2010:WorkflowViewState.IdRef="GetPassword_1" ProtectedPassword="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6z2+s86+hUS97Horl+/0xwAAAAACAAAAAAAQZgAAAAEAACAAAACcWADi1d3GewUt6DRWJxFHAoPsdURkBoDiY3Xq/7xdpgAAAAAOgAAAAAIAACAAAADjfB0FtoCOV9NUaCOs/ft/aUh1dRgttOsR5UUXmnx9/RAAAACqsHbJqLzSJDo7LnFesma8QAAAAB91OIk2rv4cVQpeTUfmlcxgFQochPu7EH3TQYTaTlPFRa+SFneP75PqBFdwyTtmVFZrcQJR9Aw2f2T+1j+lw3U=" Result="[pwd]" />
-    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="Hello World!" DisplayName="Send SMTP Mail Message" Email="2gi19cs189@students.git.edu" EnableSSL="True" sap:VirtualizedContainerService.HintSize="626.4,146.4" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="False" Password="[pwd]" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="Email Automation Test" To="anikets349@gmail.com">
-      <ui:SendMail.Files>
-        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
-      </ui:SendMail.Files>
-    </ui:SendMail>
+    <ui:GetPassword DisplayName="Get Password - B5" sap:VirtualizedContainerService.HintSize="626.4,22.4" sap2010:WorkflowViewState.IdRef="GetPassword_2" ProtectedPassword="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6z2+s86+hUS97Horl+/0xwAAAAACAAAAAAAQZgAAAAEAACAAAACvUI4PrwwfB+cd8UKGRqCUwX66SjD8rhz8fkDANPQfpQAAAAAOgAAAAAIAACAAAABm0nFy/VuBkeCScjPZKFMTdzyhDpnhrQISH5s4t2Z4YRAAAAAJbJbkFD55VxlaVRF9ahEAQAAAAK9laVXGyt36wOafOXZXp8XtjkudIxK/FmWIiLVocMhdK1LW0evb4yhFVx8vSIlKbZXS6f70bvgLIs6M/ZV0eTo=" Result="[password]" />
+    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[details]" DisplayName="For Each Row - B5" sap:VirtualizedContainerService.HintSize="626.4,588" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+      <ui:ForEachRow.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="375.2,439.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="name" />
+              <Variable x:TypeArguments="x:String" Name="email" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign DisplayName="Assign - B5" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[name]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[row.Item(0).ToString]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign DisplayName="Assign - B5" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[email]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[row.Item(1).ToString]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="PFA your certificate" DisplayName="Send SMTP Mail Message - B5" Email="2gi19cs189@students.git.edu" EnableSSL="True" sap:VirtualizedContainerService.HintSize="333.6,146.4" sap2010:WorkflowViewState.IdRef="SendMail_2" IsBodyHtml="False" Password="[password]" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="Your Certficate for Event XYZ" To="[email]">
+              <ui:SendMail.Files>
+                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                  <InArgument x:TypeArguments="x:String">
+                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;D:\New folder\6th sem\RPA\Course Project\Certificates\&quot; + name + &quot;.pdf&quot;" />
+                  </InArgument>
+                </scg:List>
+              </ui:SendMail.Files>
+            </ui:SendMail>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachRow.Body>
+    </ui:ForEachRow>
   </Sequence>
 </Activity>
